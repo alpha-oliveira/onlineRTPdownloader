@@ -3,6 +3,45 @@ var app = express();
 
 var request = require('request');
 
+var bodyParser = require('body-parser');
+
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+var router = express.Router();              
+// test route to make sure everything is working (accessed at GET http://localhost:5000/api)
+router.get('/', function(req, res) {
+    
+    
+       request(req.query.link, function (error, resp, body) {
+            
+            if (error) {
+                res.send(error);
+            }
+
+            else {
+                
+                 
+          
+                let pattern = /(https:\/\/streaming-ondemand\.rtp\.pt\/)(.*)(index\.m3u8\?tlm=hls&streams=)(.*)\.mp4/;
+                let matches = body.match(pattern);
+                let link = matches[1] + matches[2] + matches[4] + ".mp4";
+
+                
+                 res.json({ urlVideo: link });  
+            }
+             
+        });
+   
+});
+
+
+
+// REGISTER OUR ROUTES -------------------------------
+// all of our routes will be prefixed with /api
+app.use('/api', router);
+
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
