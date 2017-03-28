@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body style="background-color: #eee;">
+<div class="jumbotron">
+<div class="container">
+  <h2>RTP Downloader</h2>
+  
+  <form  method ="get">
+    <div class="form-group">
+      <label for="url">URL do vídeo:</label>
+      <input type="text" class="form-control" id="url"  name="url" placeholder="http....">
+    </div>
+    
+    <button type="submit" class="btn btn-default">Descarregar</button>
+  </form><br>
+  <%
+    var alert = ["info","success","danger"];
+  %>
+  <div class="alert alert-<%=alert [ialert]%>" role="alert"><%-contalert %></div>
+ 
+</div>
+</div>
+
+   <footer>
+        <div class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container" style="font-size: .8em">
+                <p class="navbar-text">
+                    &copy; António Oliveira
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

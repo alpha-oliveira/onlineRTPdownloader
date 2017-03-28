@@ -1,0 +1,29 @@
+{
+  "name": "online-rtp-downloader",
+  "version": "0.0.1",
+  "description": "Download videos from RTP website",
+  "engines": {
+    "node": "6.4.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.5.6",
+    "express": "4.15.2",
+   " request": "2.81.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alpha-oliveira/onlineRTPdownloader"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "rtp",
+    "downloader"
+  ],
+  "license": "ISC"
+}
