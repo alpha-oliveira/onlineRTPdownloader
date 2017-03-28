@@ -2,7 +2,7 @@
   "name": "Online RTP Downloader",
   "description": "Download videos from RTP website",
   "repository": "https://github.com/alpha-oliveira/onlineRTPdownloader",
-  "logo": "/icon.ico",
+
   "keywords": [ "node",
     "heroku",
     "express",
