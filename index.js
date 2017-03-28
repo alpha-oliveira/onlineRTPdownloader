@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function (req, response) {
     var errorcode = 0; //alert-info
-    var message = "Insira o endereço da página e o nome que quer dar ao vídeo. O link para download aparecerá aqui.";
+    var message = "Insira o endereço da página que contém o vídeo. O link para download aparecerá aqui.";
 
     if (req.query['url']) {
         
