@@ -1,4 +1,4 @@
-var express = require('express');
+﻿var express = require('express');
 var app = express();
 
 var request = require('request');
@@ -24,7 +24,7 @@ router.get('/', function(req, res) {
                 
                  
           
-                let pattern = /(https:\/\/streaming-ondemand\.rtp\.pt\/)(.*)(index\.m3u8\?tlm=hls&streams=)(.*)\.mp4/;
+                let pattern = /(https:\/\/cdn-ondemand\.rtp\.pt\/)(.*)(index\.m3u8\?tlm=hls&streams=)(.*)\.mp4/;
                 let matches = body.match(pattern);
                 let link = matches[1] + matches[2] + matches[4] + ".mp4";
 
