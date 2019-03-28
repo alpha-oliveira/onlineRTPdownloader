@@ -69,7 +69,7 @@ app.get('/', function (req, response) {
                 message = "O link do vídeo é ";
                  
           
-                let pattern = /(https:\/\/streaming-ondemand\.rtp\.pt\/)(.*)(index\.m3u8\?tlm=hls&streams=)(.*)\.mp4/;
+                let pattern = /(https:\/\/cdn-ondemand\.rtp\.pt\/)(.*)(index\.m3u8\?tlm=hls&streams=)(.*)\.mp4/;
                 let matches = body.match(pattern);
                 let link = matches[1] + matches[2] + matches[4] + ".mp4";
 
